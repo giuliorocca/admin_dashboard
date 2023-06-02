@@ -9,8 +9,9 @@ ul {
     padding: 0px;
 }
 
-p {
+p, hr {
     margin: 0px;
+    padding: 0px;
 }
 
 a:link { 
@@ -92,31 +93,65 @@ a:active {
 .header {
     grid-area: header;
     display: grid;
-    grid-template-columns: 2fr 1fr 1fr 1fr;
+    grid-template-columns: 4fr auto auto auto;
     grid-template-rows: 1fr 1fr;
     grid-template-areas: 
-        "search bell small_avatar username"
+        "search bell small_avatar user_name"
         "big_avatar greeting buttons buttons";
+    align-items: center;
 }
 
 .search {
     grid-area: search;
+    display: flex;
+    align-items: center;
 }
 
 .bell {
     grid-area: bell;
+    text-align: right;
 }
 
 .big_avatar {
     grid-area: big_avatar;
+    display: flex;
+    justify-content: start;
 }
 
-.greeting {
-    grid-area: greeting;
+.small_avatar {
+    grid-area: small_avatar;
+    text-align: right;
+    margin-left: 5px;
+}
+
+.user_name {
+    grid-area: user_name;
+    text-align: right;
+    margin-left: 20px;
+    font-weight: bold;
 }
 
 .buttons {
     grid-area: buttons;
+    text-align: right;
+    display: flex;
+    gap: 20px;
+}
+
+.greeting {
+    grid-area: greeting;
+    display: flex;
+    flex-direction: column;
+}
+
+.buttons > button {
+    background-color: #1992D4;
+    color: white;
+    border-radius: 15px;
+    padding: 10px;
+    border-color: none;
+    border-width: 0px;
+    width: 6rem;
 }
 
 .search_icon, .bell_icon {
@@ -141,13 +176,20 @@ a:active {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 20px;
+    grid-template-areas: 
+        "section_title section_title"
+        "card card"
+        "card card";
 }
 
 .card {
-    border: 1px solid blue;
-    background-color: white;
+    border-left-color: #F0B429;
+    border-left-width: 15px;
     border-radius: 10px;
-}
+    background-color: white;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    padding: 30px;
+}   
 
 .right_sidebar {
     grid-area: right_sidebar;
@@ -158,6 +200,7 @@ a:active {
     height: 25px;
     margin-right: 15px;
     margin-left: 20px;
+    margin-top: 15px;
     vertical-align: center;
 }
 
@@ -166,3 +209,54 @@ a:active {
     justify-content: right;
 }
 
+.announcements {
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+}
+
+.trending {
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+}
+
+.trending_user {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: left;
+}
+
+.trending_user_info {
+    margin-left: 10px;
+}
+
+.big_avatar {
+    display: flex;
+    align-items: center;
+}
+
+.greeting {
+    margin-left: 15px;
+}
+
+.user_name_in_greeting {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.title {
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+.right_sidebar {
+    font-size: 0.9rem;
+}
+
+.right_sidebar_subtitle {
+    font-weight: bold;
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+}
+
+.right_sidebar_content {
+    padding: 30px;
+}
