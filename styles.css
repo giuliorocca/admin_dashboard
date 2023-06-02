@@ -28,7 +28,6 @@ a:active {
     text-decoration: none; 
 }
 
-
 .container {
     display: grid;
     gap: 20px;
@@ -92,6 +91,48 @@ a:active {
 
 .header {
     grid-area: header;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+        "search bell small_avatar username"
+        "big_avatar greeting buttons buttons";
+}
+
+.search {
+    grid-area: search;
+}
+
+.bell {
+    grid-area: bell;
+}
+
+.big_avatar {
+    grid-area: big_avatar;
+}
+
+.greeting {
+    grid-area: greeting;
+}
+
+.buttons {
+    grid-area: buttons;
+}
+
+.search_icon, .bell_icon {
+    fill: black;
+    height: 30px;
+    margin-right: 15px;
+    margin-left: 20px;
+}
+
+.search input[type=text] {
+    width: 70%;
+    height:25px;
+    border-radius:25px;
+    background-color: #E2E8F0;
+    border: 0px;
+    padding-left: 15px;
 }
 
 .cards {
