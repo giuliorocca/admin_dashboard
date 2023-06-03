@@ -99,7 +99,7 @@ a:active {
     grid-template-columns: 3fr 1fr 1fr 1fr;
     grid-template-rows: auto auto;
     grid-template-areas: 
-        "search bell small_avatar user_name"
+        "search top_right_header_group top_right_header_group top_right_header_group"
         "big_avatar greeting buttons buttons";
     align-items: center;
     background-color: white;
@@ -127,6 +127,12 @@ a:active {
     grid-area: small_avatar;
     text-align: right;
     margin-left: 5px;
+}
+
+.top_right_header_group {
+    display: flex;
+    justify-content: end;
+    align-items: center;
 }
 
 .user_name {
@@ -242,6 +248,7 @@ a:active {
     justify-content: left;
     background: white;
     padding: 10px;
+    align-items: center;
 }
 
 .trending_user_info {
