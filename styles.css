@@ -1,6 +1,7 @@
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0px;
+    background-color: black;
 }
 
 ul {
@@ -32,13 +33,16 @@ a:active {
 .container {
     display: grid;
     gap: 20px;
-    grid-template-columns: 260px 1fr 1fr 1fr;
+    grid-template-columns: minmax(1fr, 270px) 1fr 1fr minmax(1fr, 200px);
     grid-template-rows: 1fr 1fr 1fr 1fr;
     grid-template-areas: 
         "left_sidebar header header header"
         "left_sidebar cards cards right_sidebar"
         "left_sidebar cards cards right_sidebar"
         "left_sidebar cards cards right_sidebar";
+    background-color: #E2E8F0;
+    max-width: 1500px;
+    margin: auto;
 }
 
 .logo {
@@ -99,6 +103,7 @@ a:active {
         "search bell small_avatar user_name"
         "big_avatar greeting buttons buttons";
     align-items: center;
+    background-color: white;
 }
 
 .search {
@@ -173,13 +178,13 @@ a:active {
 .cards {
     grid-area: cards;
     background-color: #E2E8F0;
+}
+
+.cards_group {
+    background-color: #E2E8F0;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 20px;
-    grid-template-areas: 
-        "section_title section_title"
-        "card card"
-        "card card";
 }
 
 .card {
@@ -193,6 +198,7 @@ a:active {
 
 .right_sidebar {
     grid-area: right_sidebar;
+    background-color: #E2E8F0;
 }
 
 .content_icon {
@@ -211,16 +217,23 @@ a:active {
 
 .announcements {
     box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    border-radius: 10px;
 }
 
-.trending {
+.right_sidebar_content {
+    background: white;
+}
+
+.trending_users {
     box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    border-radius: 10px;
 }
 
 .trending_user {
     display: grid;
     grid-template-columns: auto auto;
     justify-content: left;
+    background: white;
 }
 
 .trending_user_info {
@@ -241,7 +254,7 @@ a:active {
     font-size: 1.5rem;
 }
 
-.title {
+.title, .announcements_title, .trending_title, .cards_title {
     font-weight: bold;
     font-size: 1.2rem;
     margin-bottom: 5px;
