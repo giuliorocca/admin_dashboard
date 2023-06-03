@@ -44,6 +44,16 @@ a:active {
     margin: auto;
 }
 
+/* LEFT SIDEBAR */
+
+.left_sidebar {
+    grid-area: left_sidebar;
+    background-color: #1992D4;
+    color: white;
+    font-size: 1.2rem;
+    padding-right: 20px;
+}
+
 .logo {
     display: flex;
     justify-content: left;
@@ -59,12 +69,17 @@ a:active {
     margin-left: 20px;
 }
 
-.left_sidebar {
-    grid-area: left_sidebar;
-    background-color: #1992D4;
-    color: white;
-    font-size: 1.2rem;
-    padding-right: 20px;
+.left_sidebar_li_div {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.left_sidebar_icon {
+    fill: white;
+    height: 30px;
+    margin-right: 15px;
+    margin-left: 20px;
 }
 
 .top_left_sidebar {
@@ -81,18 +96,7 @@ a:active {
     gap: 15px;
 }
 
-.left_sidebar_li_div {
-    display: flex;
-    justify-content: left;
-    align-items: center;
-}
-
-.left_sidebar_icon {
-    fill: white;
-    height: 30px;
-    margin-right: 15px;
-    margin-left: 20px;
-}
+/* HEADER */
 
 .header {
     grid-area: header;
@@ -113,21 +117,19 @@ a:active {
     align-items: center;
 }
 
-.bell {
-    grid-area: bell;
-    text-align: right;
+.search_icon, .bell_icon {
+    fill: black;
+    height: 30px;
+    margin-right: 15px;
 }
 
-.big_avatar {
-    grid-area: big_avatar;
-    display: flex;
-    justify-content: start;
-}
-
-.small_avatar {
-    grid-area: small_avatar;
-    text-align: right;
-    margin-left: 5px;
+.search input[type=text] {
+    width: 70%;
+    height:25px;
+    border-radius:25px;
+    background-color: #E2E8F0;
+    border: 0px;
+    padding-left: 15px;
 }
 
 .top_right_header_group {
@@ -137,6 +139,17 @@ a:active {
     align-items: center;
 }
 
+.bell {
+    grid-area: bell;
+    text-align: right;
+}
+
+.small_avatar {
+    grid-area: small_avatar;
+    text-align: right;
+    margin-left: 5px;
+}
+
 .user_name {
     grid-area: user_name;
     text-align: right;
@@ -144,17 +157,30 @@ a:active {
     font-weight: bold;
 }
 
-.buttons {
-    grid-area: buttons;
-    justify-content: right;
+.big_avatar {
+    grid-area: big_avatar;
     display: flex;
-    gap: 20px;
+    justify-content: start;
+    align-items: center;
 }
 
 .greeting {
     grid-area: greeting;
     display: flex;
     flex-direction: column;
+    margin-left: 15px;
+}
+
+.user_name_in_greeting {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.buttons {
+    grid-area: buttons;
+    justify-content: right;
+    display: flex;
+    gap: 20px;
 }
 
 .buttons > button {
@@ -167,21 +193,7 @@ a:active {
     width: 6rem;
 }
 
-.search_icon, .bell_icon {
-    fill: black;
-    height: 30px;
-    margin-right: 15px;
-    margin-left: 20px;
-}
-
-.search input[type=text] {
-    width: 70%;
-    height:25px;
-    border-radius:25px;
-    background-color: #E2E8F0;
-    border: 0px;
-    padding-left: 15px;
-}
+/* CARDS */
 
 .cards {
     grid-area: cards;
@@ -207,12 +219,6 @@ a:active {
     padding: 30px;
 }   
 
-.right_sidebar {
-    grid-area: right_sidebar;
-    background-color: #E2E8F0;
-    max-width: 300px;
-}
-
 .content_icon {
     fill: black;
     height: 25px;
@@ -227,15 +233,33 @@ a:active {
     justify-content: right;
 }
 
+/* RIGHT SIDEBAR */
+
+.right_sidebar {
+    grid-area: right_sidebar;
+    max-width: 300px;
+    background-color: #E2E8F0;
+    font-size: 0.9rem;
+    padding-right: 20px;
+    padding-bottom: 20px;
+}
+
+.right_sidebar_subtitle {
+    font-weight: bold;
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+}
+
+.right_sidebar_content {
+    padding: 10px;
+    background: white;
+}
+
 .announcements {
     box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
     border-radius: 10px;
     background-color: white;
     padding: 20px;
-}
-
-.right_sidebar_content {
-    background: white;
 }
 
 .trending_users {
@@ -262,20 +286,6 @@ a:active {
     margin-right: 10px;
 }
 
-.big_avatar {
-    display: flex;
-    align-items: center;
-}
-
-.greeting {
-    margin-left: 15px;
-}
-
-.user_name_in_greeting {
-    font-weight: bold;
-    font-size: 1.5rem;
-}
-
 .title, .announcements_title, .trending_title, .cards_title {
     font-weight: bold;
     font-size: 1.2rem;
@@ -284,20 +294,4 @@ a:active {
 
 .cards_title, .announcements_title, .trending_title {
     margin-bottom: 10px;
-}
-
-.right_sidebar {
-    font-size: 0.9rem;
-    padding-right: 20px;
-    padding-bottom: 20px;
-}
-
-.right_sidebar_subtitle {
-    font-weight: bold;
-    font-size: 0.9rem;
-    margin-bottom: 5px;
-}
-
-.right_sidebar_content {
-    padding: 10px;
 }
