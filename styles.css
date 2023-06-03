@@ -32,7 +32,6 @@ a:active {
 
 .container {
     display: grid;
-    gap: 20px;
     grid-template-columns: minmax(1fr, 270px) 1fr 1fr minmax(1fr, 200px);
     grid-template-rows: 1fr 1fr 1fr 1fr;
     grid-template-areas: 
@@ -97,13 +96,15 @@ a:active {
 .header {
     grid-area: header;
     display: grid;
-    grid-template-columns: 4fr auto auto auto;
-    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 3fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
     grid-template-areas: 
         "search bell small_avatar user_name"
         "big_avatar greeting buttons buttons";
     align-items: center;
     background-color: white;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 .search {
@@ -178,6 +179,9 @@ a:active {
 .cards {
     grid-area: cards;
     background-color: #E2E8F0;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
 }
 
 .cards_group {
@@ -218,6 +222,7 @@ a:active {
 .announcements {
     box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
     border-radius: 10px;
+    background-color: white;
 }
 
 .right_sidebar_content {
@@ -227,6 +232,8 @@ a:active {
 .trending_users {
     box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
     border-radius: 10px;
+    background-color: white;
+    padding: 20px;
 }
 
 .trending_user {
@@ -234,10 +241,15 @@ a:active {
     grid-template-columns: auto auto;
     justify-content: left;
     background: white;
+    padding: 10px;
 }
 
 .trending_user_info {
     margin-left: 10px;
+}
+
+.trending_user_avatar {
+    margin-right: 10px;
 }
 
 .big_avatar {
@@ -260,8 +272,14 @@ a:active {
     margin-bottom: 5px;
 }
 
+.cards_title, .announcements_title, .trending_title {
+    margin-bottom: 10px;
+}
+
 .right_sidebar {
     font-size: 0.9rem;
+    padding-right: 20px;
+    padding-bottom: 20px;
 }
 
 .right_sidebar_subtitle {
