@@ -130,8 +130,9 @@ a:active {
 }
 
 .top_right_header_group {
+    grid-area: top_right_header_group;
     display: flex;
-    justify-content: end;
+    justify-content: right;
     align-items: center;
 }
 
@@ -144,7 +145,7 @@ a:active {
 
 .buttons {
     grid-area: buttons;
-    text-align: right;
+    justify-content: right;
     display: flex;
     gap: 20px;
 }
